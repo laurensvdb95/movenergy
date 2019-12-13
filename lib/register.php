@@ -28,6 +28,8 @@ if ( $formname == "registration_form" AND $_POST['registerbutton'] == "Bevestige
         " lid_geboortedatum='" . htmlentities($_POST['lid_geboortedatum'], ENT_QUOTES) . "' , " .
         " lid_straat='" . htmlentities($_POST['lid_straat'], ENT_QUOTES) . "' , " .
         " lid_huisnr='" . htmlentities($_POST['lid_huisnr'], ENT_QUOTES) . "' , " .
+        " lid_stad='" . htmlentities($_POST['lid_stad'], ENT_QUOTES) . "' , " .
+        " lid_postcode='" . htmlentities($_POST['lid_postcode'], ENT_QUOTES) . "' , " .
         " lid_login='" . $_POST['lid_login'] . "' , " .
         " lid_password='" . $password_encrypted . "'  ";
     var_dump($sql);
