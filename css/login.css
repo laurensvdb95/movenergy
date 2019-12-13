@@ -1,0 +1,51 @@
+body{
+    background: white;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    column-gap: 1em;
+}
+
+h2{
+    font-size: 1.4rem;
+}
+
+aside{
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.groepsfoto{
+    width: 100%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+label, input{
+    margin-top: 2em;
+}
+
+input{
+    padding: 1em;
+    background: #EEE;
+}
+
+.bevestigen input{
+    margin: 3em auto;
+    width: 50%;
+    background: #F6FF7E;
+    border-radius: 10px;
+}
+
+aside a{
+    text-align: center;
+    color: #2385A3;
+    text-decoration: underline;
+    padding-bottom: 1em;
+}

@@ -1,0 +1,48 @@
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+
+body{
+    font:400 100%/1.5 "Open Sans", arial, sans-serif;
+    background: white;
+}
+
+nav{background: white;}
+
+nav img{height: 30px;}
+
+nav ul{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li{
+    padding: 1em;
+    display: flex;
+    align-items: center;
+}
+
+nav a{
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+
+nav li:nth-of-type(2) a,
+nav li:nth-of-type(3) a,
+nav li:nth-of-type(4) a,
+nav li:nth-of-type(5) a,
+nav li:nth-of-type(6) a,
+nav li:nth-of-type(7) a,
+nav li:nth-of-type(8) a{
+    text-transform: uppercase;
+}
+
+nav li:nth-of-type(9){
+    border-radius: 10px;
+}
+
+nav li:nth-of-type(9) a{
+    background: #F6FF7E;
+    padding: .2em .5em;
+}

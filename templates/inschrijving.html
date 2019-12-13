@@ -1,0 +1,41 @@
+<main>
+    <aside>
+        <h2>Schrijf je in</h2>
+        <form id="inschrijving_form" action="lib/inschrijving.php" method="post">
+            <input type="hidden" id="formname" name="formname" value="inschrijving_form">
+            <input type="hidden" id="tablename" name="tablename" value="deelnemers">
+            <input type="hidden" id="pkey" name="pkey" value="dln_id">
+
+            <div class="groepsles">
+                <label for="grl_naam">Groepsles:</label>
+            </div>
+            <div class="selectles">
+                <select name="grl_naam" form="inschrijving_form" id="grl_naam">
+                    <option value="BBB">BBB</option>
+                    <option value="BFB">BFB</option>
+                    <option value="Step burn">Step burn</option>
+                    <option value="Urban running">Urban running</option>
+                    <option value="Yoga & balance">Yoga & balance</option>
+                    <option value="Cycling">Cycling</option>
+                    <option value="UCW">UCW</option>
+                </select>
+            </div>
+            <div class="datetime">
+                <label for="les_datum_tijd">Les:</label>
+            </div>
+            <div class="selectdate">
+                <select name="les_datum_tijd" form="inschrijving_form" id="les_datum_tijd">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                </select>
+            </div>
+            <div class="bevestigen">
+                <a href="#" title=""><input name="inschrijfbutton" type="submit" value="Schrijf in"></a>
+            </div>
+        </form>
+    </aside>
+    <img class="groepsfoto" src="img/groepsfoto.jpg" alt="">
+
+</main>
