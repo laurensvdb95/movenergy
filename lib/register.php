@@ -41,7 +41,7 @@ if ( $formname == "registration_form" AND $_POST['registerbutton'] == "Bevestige
 
         if ( ControleLoginWachtwoord( $_POST["lid_login"] , $_POST["lid_password"]) )
         {
-            header("Location: ../logout.php");
+            header("Location: ../gegevens.php");
         }
     }
     else

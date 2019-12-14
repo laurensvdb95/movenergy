@@ -6,7 +6,13 @@ basicHead();
 </head>
 <body>
 <?php
-    $data = GetData("select * from lid where lid_id like '".$_SERVER['QUERY_STRING']."';");
+    if ($_SESSION['lid']['lid_lesgever']=="Lesgever"){
+        $template=loadTemplate("intranav");
+    } else{
+        $template=loadTemplate("intranav2");
+    }
+    print $template;
+    $data = GetData("select * from lid where lid_id = ".$_SESSION['lid']['lid_id'].";");
     $template=loadTemplate("update");
     ReplaceContent( $data, $template);
 ?>

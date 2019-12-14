@@ -18,12 +18,13 @@ form{
 }
 
 select {
-  width: 100%;
-  padding: 1em;
+  font-size: 1rem;
+  padding: 3em;
   background: #DDDDDD;
   border: 1.5px solid #666666;
   border-radius: 10px;
   margin-top: 1.4em;
+  width: 50%;
 }
 
 option {
@@ -103,3 +104,4 @@ input{
   width: 50%;
   background: #F6FF7E;
 }
+

@@ -1,5 +1,4 @@
 <?php
-
 require_once "lib/view_functions.php";
 basicHead();
 ?>
@@ -7,7 +6,11 @@ basicHead();
 </head>
 <body>
 <?php
-$template=loadTemplate("navigatie");
+if ($_SESSION['lid']['lid_lesgever']=="Lesgever"){
+    $template=loadTemplate("intranav");
+} else{
+    $template=loadTemplate("intranav2");
+}
 print $template;
 $template=loadTemplate("inschrijving");
 print $template;

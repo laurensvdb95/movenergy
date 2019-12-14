@@ -10,7 +10,7 @@ if ( $formname == "login_form" AND $buttonvalue == "Log in" )
     if ( ControleLoginWachtwoord( $_POST['lid_login'], $_POST['lid_password'] ) )
     {
         $_SESSION["msg"][] = "Welkom, " . $_SESSION['lid']['lid_voornaam'] . "!" ;
-        //header("Location: ../logout.php");
+        header("Location: ../gegevens.php");
 
     }
     else

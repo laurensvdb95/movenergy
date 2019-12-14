@@ -6,7 +6,7 @@ basicHead();
 </head>
 <body>
 <?php
-    $template=loadTemplate("navigatie");
+    $template=loadTemplate("mainnavigatie");
     print $template;
     $template=loadTemplate("registreer");
     print $template;

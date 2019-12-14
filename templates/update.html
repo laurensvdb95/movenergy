@@ -1,49 +1,47 @@
 <main>
-    <h2>Gegevens</h2>
-
-    <form action="lib/update.php?@@lid_id@@" method="post">
-        <input type="hidden" id="formname" name="formname" value="registration_form">
-        <input type="hidden" id="tablename" name="tablename" value="lid">
-        <input type="hidden" id="pkey" name="pkey" value="usr_id">
-        <div class="naam">
-            <label for="lid_naam">Naam:</label>
-            <input type="text" class="form-control" id="lid_naam" name="lid_naam" value="@@lid_naam@@">
-        </div>
-        <div class="voornaam">
-            <label for="lid_voornaam">Voornaam:</label>
-            <input type="text" class="form-control" id="lid_voornaam" name="lid_voornaam" value="@@lid_voornaam@@">
-        </div>
-        <div class="geboortedatum">
-            <label for="lid_geboortedatum">Geboortedatum:</label>
-            <input type="date" class="form-control" id="lid_geboortedatum" name="lid_geboortedatum" value="@@lid_geboortedatum@@">
-        </div>
-        <div class="straat">
-            <label for="lid_straat">Straat:</label>
-            <input type="text" class="form-control" id="lid_straat" name="lid_straat" value="@@lid_straat@@">
-        </div>
-        <div class="huisnr">
-            <label for="lid_huisnr">Huisnr.:</label>
-            <input type="text" class="form-control" id="lid_huisnr" name="lid_huisnr" value="@@lid_huisnr@@">
-        </div>
-        <div class="stad">
-            <label for="lid_stad">Stad:</label>
-            <input type="text" class="form-control" id="lid_stad" name="lid_stad" value="@@lid_stad@@">
-        </div>
-        <div class="postcode">
-            <label for="lid_postcode">Postcode:</label>
-            <input type="text" class="form-control" id="lid_postcode" name="lid_postcode" value="@@lid_postcode@@">
-        </div>
-        <div class="login">
-            <label for="lid_login">E-mail:</label>
-            <input type="text" class="form-control" id="lid_login" name="lid_login" value="@@lid_login@@">
-        </div>
-        <div class="password">
-            <label for="lid_password">Paswoord:</label>
-            <input type="password" class="form-control" id="lid_password" name="lid_password" value="">
-        </div>
-        <div class="bevestigen">
-            <input name=savebutton type="submit" value="Save">
-        </div>
-
-    </form>
+        <h2>Gegevens</h2>
+        <form action="lib/update.php?@@lid_id@@" method="post">
+            <input type="hidden" id="formname" name="formname" value="registration_form">
+            <input type="hidden" id="tablename" name="tablename" value="lid">
+            <input type="hidden" id="pkey" name="pkey" value="usr_id">
+            <div class="naam">
+                <label for="lid_naam">Naam:</label>
+                <input type="text" class="form-control" id="lid_naam" name="lid_naam" value="@@lid_naam@@">
+            </div>
+            <div class="voornaam">
+                <label for="lid_voornaam">Voornaam:</label>
+                <input type="text" class="form-control" id="lid_voornaam" name="lid_voornaam" value="@@lid_voornaam@@">
+            </div>
+            <div class="geboortedatum">
+                <label for="lid_geboortedatum">Geboortedatum:</label>
+                <input type="date" class="form-control" id="lid_geboortedatum" name="lid_geboortedatum" value="@@lid_geboortedatum@@">
+            </div>
+            <div class="straat">
+                <label for="lid_straat">Straat:</label>
+                <input type="text" class="form-control" id="lid_straat" name="lid_straat" value="@@lid_straat@@">
+            </div>
+            <div class="huisnr">
+                <label for="lid_huisnr">Huisnr.:</label>
+                <input type="text" class="form-control" id="lid_huisnr" name="lid_huisnr" value="@@lid_huisnr@@">
+            </div>
+            <div class="stad">
+                <label for="lid_stad">Stad:</label>
+                <input type="text" class="form-control" id="lid_stad" name="lid_stad" value="@@lid_stad@@">
+            </div>
+            <div class="postcode">
+                <label for="lid_postcode">Postcode:</label>
+                <input type="text" class="form-control" id="lid_postcode" name="lid_postcode" value="@@lid_postcode@@">
+            </div>
+            <div class="login">
+                <label for="lid_login">E-mail:</label>
+                <input type="text" class="form-control" id="lid_login" name="lid_login" value="@@lid_login@@">
+            </div>
+            <div class="password">
+                <label for="lid_password">Paswoord:</label>
+                <input type="password" class="form-control" id="lid_password" name="lid_password" value="">
+            </div>
+            <div class="bevestigen">
+                <input name=savebutton type="submit" value="Save">
+            </div>
+        </form>
 </main>

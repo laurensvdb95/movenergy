@@ -4,7 +4,7 @@ basicHead();
 ?>
 <body>
 <?php
-    $template=loadTemplate("navigatie");
+    $template=loadTemplate("mainnavigatie");
     print $template;
 ?>
 </body>
