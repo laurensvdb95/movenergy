@@ -24,6 +24,7 @@ if ( $formname == "registration_form" AND $_POST['registerbutton'] == "Bevestige
 
     $sql = "INSERT INTO $tablename SET " .
         " lid_naam='" . htmlentities($_POST['lid_naam'], ENT_QUOTES) . "' , " .
+        " lid_lesgever='" . htmlentities($_POST['lid_lesgever'], ENT_QUOTES) . "' , " .
         " lid_voornaam='" . htmlentities($_POST['lid_voornaam'], ENT_QUOTES) . "' , " .
         " lid_geboortedatum='" . htmlentities($_POST['lid_geboortedatum'], ENT_QUOTES) . "' , " .
         " lid_straat='" . htmlentities($_POST['lid_straat'], ENT_QUOTES) . "' , " .

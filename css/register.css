@@ -13,6 +13,23 @@ form{
   column-gap: 2em;
 }
 
+.groepsles, .datetime {
+  margin-top: 2em;
+}
+
+select {
+  width: 100%;
+  padding: 1em;
+  background: #DDDDDD;
+  border: 1.5px solid #666666;
+  border-radius: 10px;
+  margin-top: 1.4em;
+}
+
+option {
+  background: #DDDDDD;
+}
+
 h2{
   font-size: 1.4rem;
 }

@@ -29,6 +29,7 @@ form{
 
 .groepsles, .datetime {
     margin-top: 2em;
+    padiding: 2em 0;
 }
 
 select {

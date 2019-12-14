@@ -1,13 +1,20 @@
 <main>
   <h2>Registreer</h2>
 
-  <form action="lib/register.php" method="post">
+  <form action="lib/register.php" method="post" id="registratie_form">
       <input type="hidden" id="formname" name="formname" value="registration_form">
       <input type="hidden" id="tablename" name="tablename" value="lid">
       <input type="hidden" id="pkey" name="pkey" value="usr_id">
       <div class="naam">
         <label for="lid_naam">Naam:</label>
         <input type="text" class="form-control" id="lid_naam" name="lid_naam" value="">
+      </div>
+      <div class="Lesgever">
+          <label for="lid_lesgever">Ik schrijf me in als:</label>
+          <select name="lid_lesgever" form="registratie_form" id="lid_lesgever">
+              <option value="Lid">Lid</option>
+              <option value="Legever">Lesgever</option>
+          </select>
       </div>
       <div class="voornaam">
         <label for="lid_voornaam">Voornaam:</label>
