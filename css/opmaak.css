@@ -46,3 +46,8 @@ nav li:nth-of-type(9) a{
     background: #F6FF7E;
     padding: .2em .5em;
 }
+
+nav ol li{
+    padding:0;
+    margin: 0;
+}

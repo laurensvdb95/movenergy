@@ -1,6 +1,7 @@
 <?php
 require_once "lib/autoload.php";
 basicHead();
+ShowMessages();
 ?>
 <link rel="stylesheet" href="css/login.css">
 </head>
