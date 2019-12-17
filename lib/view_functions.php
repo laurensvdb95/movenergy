@@ -33,6 +33,17 @@ function ReplaceContent( $data, $template_html )
     }
 }
 
+function GetLes($les){
+    foreach ( $les as $row )
+    {
+        foreach($row as $field => $value)
+        {
+            $content = $value;
+        }
+    }
+    return $content;
+}
+
 function ReplaceImages($row, $template_html)
 {
     $content = $template_html;
