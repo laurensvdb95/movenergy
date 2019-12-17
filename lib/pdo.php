@@ -1,9 +1,9 @@
 <?php
 function GetConnection()
 {
-    $dsn = "mysql:host=localhost;dbname=movenergy";
-    $user = "root";
-    $passwd = "root";
+    $dsn = "mysql:host=185.115.218.166;dbname=wdev_rob";
+    $user = "wdev_rob";
+    $passwd = "A3yVSxneWIQL";
 
     $pdo = new PDO($dsn, $user, $passwd);
     return $pdo;
