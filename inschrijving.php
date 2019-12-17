@@ -1,5 +1,5 @@
 <?php
-require_once "lib/view_functions.php";
+require_once "lib/autoload.php";
 basicHead();
 ?>
 <link rel="stylesheet" href="css/inschrijving.css">

@@ -1,0 +1,34 @@
+<main>
+    <aside>
+        <h2>Maak nieuwe les aan:</h2>
+        <form id="nieuweles_form" action="lib/nieuweles.php" method="post">
+            <input type="hidden" id="formname" name="formname" value="nieuweles_form">
+            <input type="hidden" id="tablename" name="tablename" value="lesdag">
+            <input type="hidden" id="pkey" name="pkey" value="les_id">
+
+            <div class="groepsles">
+                <label for="grl_naam">Groepsles:</label>
+            </div>
+            <div class="selectles">
+                <select name="grl_naam" form="nieuweles_form" id="grl_naam">
+                    <option value="BBB">BBB</option>
+                    <option value="BFB">BFB</option>
+                    <option value="Step burn">Step burn</option>
+                    <option value="Urban running">Urban running</option>
+                    <option value="Yoga & balance">Yoga & balance</option>
+                    <option value="Cycling">Cycling</option>
+                    <option value="UCW">UCW</option>
+                </select>
+            </div>
+
+            <label for="les_datumtijd">Datum & tijd:</label>
+            <input type="datetime-local" class="form-control" id="les_datumtijd" name="les_datumtijd" value="">
+
+            <div class="bevestigen">
+                <a href="#" title=""><input name="inschrijfbutton" type="submit" value="Aanmaken"></a>
+            </div>
+        </form>
+    </aside>
+    <img class="groepsfoto" src="img/groepsfoto.jpg" alt="">
+
+</main>

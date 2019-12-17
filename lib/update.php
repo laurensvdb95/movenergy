@@ -27,6 +27,8 @@ if ($_POST["savebutton"] == "Save") {
     echo $sql;
 
     ExecuteSQL($sql);
+    header("Location: ../gegevens.php");
+    $_SESSION["msg"][] = "Gegevens zijn gewijzigd";
 }
 
 else{

@@ -26,6 +26,7 @@ function ReplaceContent( $data, $template_html )
         foreach($row as $field => $value)
         {
             $content = str_replace("@@$field@@", $value, $content);
+
         }
 
         print $content;

@@ -6,10 +6,10 @@ require_once "pdo.php";                         //database functies
 require_once "view_functions.php";      //basic_head, load_template, replacecontent...
 require_once "authorisation.php";      //controle login e.d.
 require_once "show_messages.php";
-
+/*
 //redirect naar NO ACCESS pagina als de gebruiker niet ingelogd is en niet naar
 //de loginpagina gaat
-if ( ! isset($_SESSION['lid']) AND $login_form=false AND $register_form=false)
+if ( ! isset($_SESSION['lid']) AND ! $login_form AND ! $register_form AND ! $no_access)
 {
-    header("Location: /school/movenergy/login.php");
+    header("Location: /movenergy/login.php");
 }

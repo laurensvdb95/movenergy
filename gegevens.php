@@ -2,6 +2,7 @@
 require_once "lib/autoload.php";
 basicHead();
 ShowMessages();
+var_dump($_SESSION['lid']);
 ?>
 <link rel="stylesheet" href="css/register.css">
 </head>
