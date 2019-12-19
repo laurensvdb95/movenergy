@@ -1,11 +1,19 @@
 <?php
 function GetConnection()
 {
-    $dsn = "mysql:host=185.115.218.166;dbname=wdev_rob";
-    $user = "wdev_rob";
-    $passwd = "A3yVSxneWIQL";
+    global $dbhost, $dbname, $dbuser, $dbpassword;
 
-    $pdo = new PDO($dsn, $user, $passwd);
+    require_once "password.php";
+    $arr_connection = GetConnectionData();
+
+    $dbhost = $arr_connection['dbhost'];
+    $dbname = $arr_connection['dbname'];
+    $dbuser = $arr_connection['dbuser'];
+    $dbpassword = $arr_connection['dbpassword'];
+
+    $dsn = "mysql:host=$dbhost;dbname=$dbname";
+
+    $pdo = new PDO($dsn, $dbuser,$dbpassword);
     return $pdo;
 }
 
