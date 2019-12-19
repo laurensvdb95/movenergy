@@ -4,7 +4,6 @@ $no_access = false;
 basicHead();
 ?>
 <link rel="stylesheet" href="css/subpagina.css">
-</head>
 <body>
 <?php
     $template=loadTemplate("mainnavigatie");
