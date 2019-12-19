@@ -51,3 +51,35 @@ nav ol li{
     padding:0;
     margin: 0;
 }
+
+.tabel{
+    display: flex;
+}
+
+table{
+    margin-left: 1em;
+    width: 60%;
+}
+
+table caption{
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-align: left;
+    margin-bottom: .5em;
+}
+
+table thead{background: black;}
+
+
+
+table tr:nth-last-of-type(even){background: #DDD;}
+
+table th{
+    text-align: left;
+    color: white;
+    padding: .5em;
+}
+
+table td{
+    padding: .5em;
+}

@@ -15,8 +15,8 @@ if ( $formname == "nieuweles_form" AND $_POST['inschrijfbutton'] == "Aanmaken" )
         header("Location: ../nieweles.php");
     } else {
         $sql = "INSERT INTO $tablename SET " .
-            " les_grl_id=(select grl_id from groepsles2 where grl_naam = '" . htmlentities($_POST['grl_naam'], ENT_QUOTES) . "') , " .
-            "les_datumtijd='" . htmlentities($_POST['les_datumtijd'], ENT_QUOTES);
+            " les_grl_id=(select grl_id from groepsles2 where grl_fullname = '" . htmlentities($_POST['grl_fullname'], ENT_QUOTES) . "') ," .
+            "les_datumtijd='" . htmlentities($_POST['les_datumtijd'], ENT_QUOTES).
         "';";
         var_dump($sql);
     }

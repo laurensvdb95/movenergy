@@ -8,7 +8,7 @@ body{
 }
 
 header{
-  min-height: 90vh;
+  min-height: calc(100vh - 62px);
   color: white;
 }
 
