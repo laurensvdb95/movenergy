@@ -1,5 +1,5 @@
 <?php
-require_once "lib/view_functions.php";
+require_once "lib/autoload.php";
 basicHead();
 ShowMessages();
 ?>
@@ -7,11 +7,7 @@ ShowMessages();
     </head>
     <body>
     <?php
-    if ($_SESSION['lid']['lid_lesgever']=="Lesgever"){
-        $template=loadTemplate("intranav");
-    } else{
-        $template=loadTemplate("intranav2");
-    }
+    $template= loadNav();
     print $template;
     $template=loadTemplate("nieuweles");
     print $template;

@@ -67,3 +67,11 @@ function ReplaceContentOneRow( $row, $template_html )
     return $content;
 }
 
+function loadNav(){
+    if ($_SESSION['lid']['lid_lesgever']=="Lesgever"){
+        $template=loadTemplate("intranav");
+    } else{
+        $template=loadTemplate("intranav2");
+    }
+    return $template;
+}

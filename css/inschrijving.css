@@ -29,12 +29,12 @@ form{
 
 .groepsles, .datetime {
     margin-top: 2em;
-    padiding: 2em 0;
+    padding: 2em 0;
 }
 
 select {
     font-size: 1rem;
-    padding: 3em;
+    padding: 1em;
     background: #DDDDDD;
     border: 1.5px solid #666666;
     border-radius: 10px;
