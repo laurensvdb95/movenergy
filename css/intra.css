@@ -1,0 +1,36 @@
+body{
+    background: #CCC;
+}
+
+main{
+    background: white;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 2em;
+    padding: 1em;
+    width: 40em;
+    text-align: center;
+}
+
+h2{
+    padding: 2em;
+    font-size: 1.5rem;
+}
+
+div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 2em;
+}
+
+div:last-of-type{
+    display: flex;
+    justify-content: center;
+}
+
+.bevestigen input{
+    background: #F6FF7E;
+    width: 20em;
+    height: 2em;
+    border-radius: 5px;
+}

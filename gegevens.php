@@ -3,7 +3,7 @@ require_once "lib/autoload.php";
 basicHead();
 ShowMessages();
 ?>
-<link rel="stylesheet" href="css/register.css">
+<link rel="stylesheet" href="css/intra.css">
 </head>
 <body>
 <?php

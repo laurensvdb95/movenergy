@@ -1,0 +1,299 @@
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+
+body{
+    font:400 100%/1.5 "Open Sans", arial, sans-serif; ;
+    background: black;
+}
+
+
+/*Navigatie------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+nav{background: white;}
+
+nav img{height: 30px;}
+
+nav ul{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li{
+    padding: 1em;
+    display: flex;
+    align-items: center;
+}
+
+nav a{
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+
+nav li:nth-of-type(9) a{
+    background: #F6FF7E;
+    padding: .2em .5em;
+    border-radius: 10%;
+}
+
+/*Header---------------------------------------------------------------------------------------------------------------------------------*/
+
+header{
+    min-height: 400px;
+    background-color: black;
+    color: white
+}
+
+header ul{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header h1{
+    font-size: 2rem;
+    margin-top: 1em;
+    text-transform: uppercase;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+    padding: 1em;
+    text-transform: uppercase;
+}
+
+header a:hover{
+    text-decoration: underline;
+}
+
+
+/*Lesconcepten---------------------------------------------------------------------------------------------------------------------------*/
+
+.lesconcepten .uitleg{
+    background: white;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.lesconcepten .uitleg h2{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.lesconcepten .uitleg a{
+    color: black;
+    text-decoration: none;
+    background: #F6FF7E;
+    padding: .2em .5em;
+    border-radius: 10px;
+}
+
+/* Slideshow container */
+.lesconcepten section{
+    background: black;
+    padding: 1em;
+}
+
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    background: black;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+    height: 400px;
+}
+
+.mySlides:nth-of-type(1){
+    background: url(../img/11.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.mySlides:nth-of-type(2){
+    background: url(../img/21.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.mySlides:nth-of-type(3){
+    background: url(../img/31.jpg);
+    background-size: cover;
+}
+
+.mySlides:nth-of-type(4){
+    background: url(../img/41.jpg);
+    background-size: cover;
+    background-position: -1em -7em;
+}
+
+.mySlides:nth-of-type(5){
+    background: url(../img/51.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.mySlides:nth-of-type(6){
+    background: url(../img/61.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.mySlides:nth-of-type(7){
+    background: url(../img/71.jpg);
+    background-size: cover;
+    background-position: 0em -3em;
+}
+
+.beschrijving{
+    display: none;
+    background: rgba(255,255,255,.2);
+    height: 100%;
+}
+
+.mySlides:hover .beschrijving{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mySlides .beschrijving a{
+    padding: 1em;
+    color: black;
+    text-decoration: none;
+}
+
+.mySlides .beschrijving a:nth-of-type(1){
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.mySlides .beschrijving a:nth-of-type(2){
+    background: #F6FF7E;
+    padding: .2em .5em;
+    border-radius: 10px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/*Over ons-------------------------------------------------------------------------------------------------------------------------------*/
+
+.overons{
+    background: white;
+    min-height: 400px;
+    display: flex;
+    text-align: center;
+}
+
+.overons section{width: 50%;}
+
+.overons section:nth-of-type(1){
+    background: url("../img/1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.overons section:nth-of-type(2){
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1em;
+}
+
+.overons section:nth-of-type(2) h2{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+/*contact-------------------------------------------------------------------------------------------------------------------------------*/
+
+.contact{
+    text-align: center;
+    padding: 1em;
+    min-height: 400px;
+    color: white;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+}
+
+.contact h2{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+aside{
+    background:url(../img/map.jpg) center/cover;
+}
+
+article li{
+    margin-bottom: 1em;
+}
+
+article li:nth-of-type(1){
+    margin-top: 2em;
+}
