@@ -15,9 +15,18 @@ if ( $formname == "nieuweles_form" AND $_POST['inschrijfbutton'] == "Aanmaken" )
     $data = GetData($sql);
     var_dump($data);
 
+    $d=strtotime("today");
+    $datum=date("Y-m-d h:i:s", $d);
+    if ($datumtijd < $datum){
+        $_SESSION["msg"][] = "Deze datum ligt in het verleden kies een datum in de toekomst";
+        header("Location: ../nieuweles.php");
+        die;
+        }
+
     if (count($data) > 0) {
         $_SESSION["msg"][] = "Er staat al eeen les gepland probeer op een ander moment.";
         header("Location: ../nieuweles.php");
+        die;
 
     } else {
         $sql = "INSERT INTO $tablename SET " .

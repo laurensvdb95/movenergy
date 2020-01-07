@@ -70,7 +70,11 @@ function ReplaceContentOneRow( $row, $template_html )
 function loadNav(){
     if ($_SESSION['lid']['lid_lesgever']=="Lesgever"){
         $template=loadTemplate("intranav");
-    } else{
+    }
+    elseif ($_SESSION['lid']['lid_lesgever']=="Admin"){
+        $template=loadTemplate("intranav3");
+    }
+    else{
         $template=loadTemplate("intranav2");
     }
     return $template;

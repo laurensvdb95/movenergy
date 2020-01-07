@@ -1,4 +1,5 @@
 <?php
+$no_access=false;
 require_once "lib/autoload.php";
 basicHead();
 ShowMessages();
@@ -7,13 +8,15 @@ ShowMessages();
 </head>
 <body>
 <?php
-if ($_SESSION['lid']['lid_lesgever']=="Lesgever"){
-    $template=loadTemplate("intranav");
-} else{
-    $template=loadTemplate("intranav2");
-}
+$template= loadNav();
 print $template;
-$sql= "select les_datumtijd from lesdag inner join groepsles2 g on lesdag.les_grl_id = g.grl_id where grl_fullname='".$_POST['grl_fullname']."'limit 5;";
+$d=strtotime("today");
+$datum=date("Y-m-d h:i:s", $d);
+$sql= "select les_id, les_datumtijd from lesdag
+inner join groepsles2 g on lesdag.les_grl_id = g.grl_id
+where grl_fullname= '".$_POST['grl_fullname']."' and les_datumtijd>'".$datum."'
+group by les_id, les_datumtijd
+limit 5;";
 $data= GetData($sql);
 $template = LoadTemplate("inschrijving2");
 print ($template);

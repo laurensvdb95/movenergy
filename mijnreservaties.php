@@ -1,4 +1,5 @@
 <?php
+$no_access=false;
 require_once "lib/autoload.php";
 basicHead();
 ShowMessages();

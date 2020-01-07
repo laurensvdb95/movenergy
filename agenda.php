@@ -1,12 +1,5 @@
 <?php
-session_start();
-if ($_SESSION['lid']['lid_lesgever']=="Lesgever"){
-    $no_access=true;
-}
-else{
-    session_destroy();
-    header("Location: login.php");
-}
+$no_access=false;
 require_once "lib/autoload.php";
 basicHead();
 ShowMessages();
@@ -18,12 +11,11 @@ $template= loadNav();
 print $template;
 $d=strtotime("today");
 $datum=date("Y-m-d h:i:s", $d);
-$sql= "select grl_fullname, les_datumtijd, les_id from groepsles2
+$sql= "select grl_fullname, les_datumtijd from groepsles2
 inner join lesdag l on groepsles2.grl_id = l.les_grl_id
-where grl_lid_id=  ".$_SESSION['lid']['lid_id']." and les_datumtijd>'".$datum."'
- order by les_datumtijd;";
+order by les_datumtijd;";
 $data = GetData($sql);
-$template=loadTemplate("lessen");
+$template=loadTemplate("agenda");
 ?>
 <div class="tabel">
     <table>
@@ -31,7 +23,6 @@ $template=loadTemplate("lessen");
         <tr>
             <th>Les</th>
             <th>Tijdstip</th>
-            <th></th>
         </tr>
         </thead>
         <?php
@@ -39,5 +30,4 @@ $template=loadTemplate("lessen");
         ?>
     </table>
 </div>
-<a href="nieuweles.php">Nieuwe les</a>
 </body>

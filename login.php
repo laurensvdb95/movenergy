@@ -1,8 +1,8 @@
 <?php
-require_once "lib/autoload.php"; //yyy
+$login_form=true;
+require_once "lib/autoload.php";
 basicHead();
 ShowMessages();
-$login_form=true;
 ?>
 <link rel="stylesheet" href="css/login.css">
 </head>

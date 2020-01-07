@@ -1,0 +1,31 @@
+<main>
+    <aside>
+        <h2>Nieuwe lesgever</h2>
+        <form action="lib/nieuwelesgever.php" method="post">
+
+            <input type="hidden" id="formname" name="formname" value="lesgever_form">
+
+            <label for="lid_login" class="col-form-label">E-mail:</label>
+            <input type="email" class="form-control" id="lid_login" name="lid_login" value="">
+
+            <div class="selectles">
+                <select name="grl_fullname" id="grl_fullname">
+                    <option value="BBB high intensity">BBB high intensity</option>
+                    <option value="Brooklyn fit boxing">Brooklyn fit boxing</option>
+                    <option value="Step Burn">Step Burn</option>
+                    <option value="Urban Running">Urban Running</option>
+                    <option value="Yoga & Balance">Yoga & Balance</option>
+                    <option value="Cycling">Cycling</option>
+                    <option value="Urban cross workout">Urban cross workout</option>
+                </select>
+            </div>
+            <div class="bevestigen">
+                <input name="bevestigenbutton" type="submit" value="Bevestigen">
+            </div>
+
+
+        </form>
+    </aside>
+
+    <img class="groepsfoto" src="img/groepsfoto.jpg" alt="">
+</main>

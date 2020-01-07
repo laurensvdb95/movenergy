@@ -1,5 +1,12 @@
 <?php
-$no_access=false;
+session_start();
+if ($_SESSION['lid']['lid_lesgever']=="Admin"){
+    $no_access=true;
+}
+else{
+    session_destroy();
+    header("Location: login.php");
+}
 require_once "lib/autoload.php";
 basicHead();
 ShowMessages();
@@ -10,7 +17,7 @@ ShowMessages();
 <?php
 $template= loadNav();
 print $template;
-$template=loadTemplate("inschrijving");
+$template=loadTemplate("lesgevers");
 print $template;
 ?>
 </body>

@@ -1,4 +1,5 @@
 <?php
+$no_access=false;
 require_once "lib/autoload.php";
 basicHead();
 ShowMessages();
@@ -7,11 +8,7 @@ ShowMessages();
 </head>
 <body>
 <?php
-    if ($_SESSION['lid']['lid_lesgever']=="Lesgever"){
-        $template=loadTemplate("intranav");
-    } else{
-        $template=loadTemplate("intranav2");
-    }
+    $template= loadNav();
     print $template;
     $data = GetData("select * from lid where lid_id = ".$_SESSION['lid']['lid_id'].";");
     $template=loadTemplate("update");

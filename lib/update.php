@@ -6,6 +6,10 @@ $tablename = "lid";
 if ($_POST["savebutton"] == "Save") {
     $sql_body = array();
 
+    $sql = "SELECT * FROM lid WHERE lid_login='" . $_POST['lid_login'] . "' ";
+    $data = GetData($sql);
+    if (count($data) > 0) die("Deze login bestaat reeds! Gelieve een andere login te gebruiken.");
+
     foreach ($_POST as $field => $value) {
         if ($field <> "lid_id" AND $field <> "savebutton") {
             $sql_body[] = " $field = '" . htmlentities($value, ENT_QUOTES) . "' ";

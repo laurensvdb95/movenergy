@@ -1,6 +1,6 @@
 <?php
+$no_access=true;
 require_once "lib/autoload.php";
-$no_access = false;
 basicHead();
 ?>
 <link rel="stylesheet" href="css/subpagina.css">
