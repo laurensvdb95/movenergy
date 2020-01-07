@@ -11,13 +11,25 @@ if ( $formname == "registration_form" AND $_POST['registerbutton'] == "Bevestige
     //controle of gebruiker al bestaat
     $sql = "SELECT * FROM lid WHERE lid_login='" . $_POST['lid_login'] . "' ";
     $data = GetData($sql);
-    if (count($data) > 0) die("Deze gebruiker bestaat reeds! Gelieve een andere login te gebruiken.");
+    if (count($data) > 0){
+        $_SESSION["msg"][] = "Deze gebruiker bestaat reeds! Gelieve een andere login te gebruiken." ;
+        header("Location: ../register.php");
+        die;
+    }
 
     //controle wachtwoord minimaal 8 tekens
-    if (strlen($_POST["lid_password"]) < 8) die("Uw wachtwoord moet minstens 8 tekens bevatten!");
+    if (strlen($_POST["lid_password"]) < 8){
+        $_SESSION["msg"][] = "Uw wachtwoord moet minstens 8 tekens bevatten!" ;
+        header("Location: ../register.php");
+        die;
+    }
 
     //controle geldig e-mailadres
-    if (!filter_var($_POST["lid_login"], FILTER_VALIDATE_EMAIL)) die("Ongeldig email formaat voor login");
+    if (!filter_var($_POST["lid_login"], FILTER_VALIDATE_EMAIL)){
+        $_SESSION["msg"][] = "Ongeldig email formaat voor login" ;
+        header("Location: ../register.php");
+        die;
+    }
 
     //wachtwoord coderen
     $password_encrypted = password_hash($_POST["lid_password"], PASSWORD_DEFAULT);

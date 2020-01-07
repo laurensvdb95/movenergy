@@ -7,7 +7,7 @@ $pkey = $_POST["pkey"];
 $lid= $_SESSION["lid"]["lid_id"];
 
 if ( $formname == "inschrijving_form" AND $_POST['inschrijfbutton'] == "Bevestigen" ) {
-//controle of gebruiker al bestaat
+//controle of inschrijving al bestaat
     $sql= "select les_id from lesdag where les_datumtijd='". $_POST["les_datumtijd"] ."';";
     $les= GetData($sql);
     $content=GetLes($les);

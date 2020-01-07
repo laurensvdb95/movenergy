@@ -83,3 +83,7 @@ table th{
 table td{
     padding: .5em;
 }
+
+.tabel a{
+    margin-left: 1em;
+}

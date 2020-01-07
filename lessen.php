@@ -21,7 +21,7 @@ $datum=date("Y-m-d h:i:s", $d);
 $sql= "select grl_fullname, les_datumtijd, les_id from groepsles2
 inner join lesdag l on groepsles2.grl_id = l.les_grl_id
 where grl_lid_id=  ".$_SESSION['lid']['lid_id']." and les_datumtijd>'".$datum."'
- order by les_datumtijd;";
+order by les_datumtijd;";
 $data = GetData($sql);
 $template=loadTemplate("lessen");
 ?>
