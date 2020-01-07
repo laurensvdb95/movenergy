@@ -13,6 +13,7 @@ $d=strtotime("today");
 $datum=date("Y-m-d h:i:s", $d);
 $sql= "select grl_fullname, les_datumtijd from groepsles2
 inner join lesdag l on groepsles2.grl_id = l.les_grl_id
+where les_datumtijd>'".$datum."'
 order by les_datumtijd
 limit 10;";
 $data = GetData($sql);

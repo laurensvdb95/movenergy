@@ -10,18 +10,19 @@ $content=GetLes($les);
 $datumtijd= $_POST['les_datumtijd'];
 
 if ( $formname == "nieuweles_form" AND $_POST['inschrijfbutton'] == "Aanmaken" ) {
-    //controle of les al bestaat
-    $sql = "SELECT * FROM lesdag WHERE les_datumtijd='" . $datumtijd . "' ";
-    $data = GetData($sql);
 
+    //controle of de les in het verleden ligt
     $d=strtotime("today");
     $datum=date("Y-m-d h:i:s", $d);
     if ($datumtijd < $datum){
-        $_SESSION["msg"][] = "Deze datum ligt in het verleden kies een datum in de toekomst";
+        $_SESSION["msg"][] = "Deze datum ligt in het verleden, kies een datum in de toekomst";
         header("Location: ../nieuweles.php");
         die;
         }
 
+    //controle of les al bestaat
+    $sql = "SELECT * FROM lesdag WHERE les_datumtijd='" . $datumtijd . "' ";
+    $data = GetData($sql);
     if (count($data) > 0) {
         $_SESSION["msg"][] = "Er staat al eeen les gepland probeer op een ander moment.";
         header("Location: ../nieuweles.php");
