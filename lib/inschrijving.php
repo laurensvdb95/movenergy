@@ -11,7 +11,6 @@ if ( $formname == "inschrijving_form" AND $_POST['inschrijfbutton'] == "Bevestig
     $sql= "select les_id from lesdag where les_datumtijd='". $_POST["les_datumtijd"] ."';";
     $les= GetData($sql);
     $content=GetLes($les);
-    var_dump($content);
     $sql = "SELECT * FROM les_lid WHERE gli_lid_id='".$_SESSION['lid']['lid_id']. "' and gli_les_id=".$content." ";
     $data = GetData($sql);
     if (count($data) > 0){

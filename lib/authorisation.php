@@ -15,7 +15,6 @@ function ControleLoginWachtwoord( $login, $paswd )
     {
         session_start();
         $_SESSION['lid'] = $row;
-        var_dump($_SESSION['lid']);
         return true;
     }
 

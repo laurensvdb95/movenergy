@@ -17,7 +17,6 @@ if ( $formname == "lesgever_form" AND $_POST['bevestigenbutton'] == "Bevestigen"
 
     $sql = "update lid, groepsles2 SET lid_lesgever ='Lesgever', grl_lid_id = lid_id
 where lid_login='". $_POST["lid_login"] ."' and grl_fullname='". $_POST["grl_fullname"] ."';";
-    var_dump($sql);
 
     if ( ExecuteSQL($sql) )
     {

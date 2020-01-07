@@ -13,7 +13,6 @@ if ( $formname == "nieuweles_form" AND $_POST['inschrijfbutton'] == "Aanmaken" )
     //controle of les al bestaat
     $sql = "SELECT * FROM lesdag WHERE les_datumtijd='" . $datumtijd . "' ";
     $data = GetData($sql);
-    var_dump($data);
 
     $d=strtotime("today");
     $datum=date("Y-m-d h:i:s", $d);
@@ -32,7 +31,6 @@ if ( $formname == "nieuweles_form" AND $_POST['inschrijfbutton'] == "Aanmaken" )
         $sql = "INSERT INTO $tablename SET " .
             " les_grl_id='" . $content . "' , " .
             " les_datumtijd='" . $datumtijd . "';";
-        var_dump($sql);
     }
 
     if (ExecuteSQL($sql)){

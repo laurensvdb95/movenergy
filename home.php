@@ -3,6 +3,7 @@ $no_access=true;
 require_once "lib/autoload.php";
 basicHead();
 ?>
+<meta charset="utf-8">
 <link rel="stylesheet" href="css/home.css">
 <script src="js/script.js" defer></script>
 <body>

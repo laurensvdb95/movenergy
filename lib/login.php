@@ -9,14 +9,13 @@ if ( $formname == "login_form" AND $buttonvalue == "Log in" )
 {
     if ( ControleLoginWachtwoord( $_POST['lid_login'], $_POST['lid_password'] ) )
     {
-        $_SESSION["msg"][] = "Welkom, " . $_SESSION['lid']['lid_voornaam'] . "!" ;
         header("Location: ../gegevens.php");
-
+        $_SESSION["msg"][] = "Welkom, " . $_SESSION['lid']['lid_voornaam'] . "!" ;
     }
     else
     {
-        $_SESSION["msg"][] = "Sorry! Verkeerde login of wachtwoord!";
         header("Location:../login.php");
+        $_SESSION["msg"][] = "Sorry! Verkeerde login of wachtwoord!";
     }
 }
 else

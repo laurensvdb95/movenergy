@@ -7,7 +7,6 @@ where gli_les_id = " . $_SERVER['QUERY_STRING'] . " and gli_lid_id=" . $lid . ";
 
 
     $sql= "delete from les_lid where gli_les_id=" . $_SERVER['QUERY_STRING'] . " and gli_lid_id=" . $lid . ";";
-    var_dump($sql);
 
 
     if ( ExecuteSQL($sql) )
